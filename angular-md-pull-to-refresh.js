@@ -38,11 +38,11 @@ angular.module('angularMdPullToRefresh', [])
         $timeout(function () {
           var onScroll = function () {
             if (element[0].scrollTop <= 1) {
-              //if (scope.isAtTop) {
+              if (scope.isAtTop) {
                 scope.pullToRefresh();
-              //} else {
-              //  scope.isAtTop = true;
-              //}
+              } else {
+                scope.isAtTop = true;
+              }
             }
           };
           element[0].addEventListener('scroll', onScroll);
