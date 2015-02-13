@@ -18,4 +18,21 @@ How do I use it
 How do I affect the appearance
 ==============================
 
-Currently the directive injects an md-progress-bar with the md-accent color.
+Currently the directive injects an md-progress-bar with the md-accent color.  You can style the css of the progress-bar
+or the animation around by modifying the following classes, which default to:
+
+        .im-pull-to-refresh-progress-bar {
+            max-height: 5px;
+            opacity: 1;
+        }
+
+        .im-pull-to-refresh-progress-bar.ng-hide-add.ng-hide-add-active,
+        .im-pull-to-refresh-progress-bar.ng-hide-remove.ng-hide-remove-active {
+            -webkit-transition: all linear 0.25s;
+            transition: all linear 0.25s;
+        }
+
+        .im-pull-to-refresh-progress-bar.ng-hide {
+            max-height: 0;
+            opacity: 0;
+        }

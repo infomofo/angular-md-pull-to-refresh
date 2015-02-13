@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc directive
- * @name angularMdPullToRefresh.directive:pullToRefresh
+ * @name infomofo.angularMdPullToRefresh.directive:imPullToRefresh
  * @description
  * # pullToRefresh
  */
-angular.module('angularMdPullToRefresh', [])
-    .directive('pullToRefresh', function ($timeout) {
+angular.module('infomofo.angularMdPullToRefresh', [])
+    .directive('imPullToRefresh', function ($timeout) {
       return {
         restrict: 'A',
         transclude: true,
-        template: '<md-progress-linear md-mode="indeterminate" class="md-accent ng-hide" ng-show="pullToRefreshActive"></md-progress-linear><ng-transclude></ng-transclude>',
+        template: '<md-progress-linear md-mode="indeterminate" class="md-accent ng-hide im-pull-to-refresh-progress-bar" ng-show="pullToRefreshActive"></md-progress-linear><ng-transclude></ng-transclude>',
         scope: {
           refreshFunction: '&' // This function is expected to return a future
         },
@@ -38,7 +38,8 @@ angular.module('angularMdPullToRefresh', [])
           // Wait 1 second and then add an event listener to the scroll events on this list- this enables pull to refresh functionality
           $timeout(function () {
             var onScroll = function (event) {
-              if (element[0].scrollTop <= 0 && scope.lastScrollTop <= 0) {
+              //if (element[0].scrollTop <= 0 && scope.lastScrollTop <= 0) {
+              if (element[0].scrollTop <= 0) {
                 if (scope.isAtTop) {
                   scope.pullToRefresh();
                 } else {
