@@ -1,6 +1,9 @@
 {
-  "name": "angular-md-pull-to-refresh",
-  "main": "angular-md-pull-to-refresh.js",
+  "name": "infomofo-angular-md-pull-to-refresh",
+  "main": [
+    "angular-md-pull-to-refresh.js",
+    "angular-md-pull-to-refresh.css",
+  ],
   "version": "0.0.0",
   "homepage": "https://github.com/infomofo/angular-md-pull-to-refresh",
   "authors": [
@@ -12,7 +15,6 @@
     "material",
     "design",
     "pull",
-    "to",
     "refresh"
   ],
   "license": "MIT",
