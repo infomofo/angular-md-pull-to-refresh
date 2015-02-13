@@ -13,13 +13,14 @@ How do I use it
         var app = angular.module('YourApp',['angular-md-pull-to-refresh']);
 
 3. Use the directive in your html file.
-4.
+
+        <md-content im-pull-to-refresh refresh-function="refreshFunction()">
 
 How do I affect the appearance
 ==============================
 
 Currently the directive injects an md-progress-bar with the md-accent color.  You can style the css of the progress-bar
-or the animation around by modifying the following classes, which default to:
+or the animation around by modifying the following classes, such as:
 
         .im-pull-to-refresh-progress-bar {
             max-height: 5px;
