@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="bower_components/angular-md-pull-to-refresh/angular-md-pull-to-refresh.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body ng-controller="View1Ctrl" layout="column">
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <md-toolbar class="md-warn">
+
+    <div class="md-toolbar-tools">
+      infomofo.angular-md-pull-to-refresh demo
+    </div>
+  </md-toolbar>
+  <md-content im-pull-to-refresh refresh-function="refreshFunction()" layout-padding>
+    <h1>Pull to Refresh</h1>
+    <p>
+      This pane demonstrates a pull-to-refresh gesture. Pulling down on this app will trigger a callback called
+      "refreshFunction" that will wait for 2 seconds and then
+      add a random quote to the top of this list.  While it is refreshing, a material design progress bar will display
+      at the top of the content area.
+    </p>
+    <p>
+      This page will really only demonstrate something on mobile devices. On a desktop you can emulate a mobile device to
+      fake the pull to refresh gesture.
+    </p>
+    <md-list>
+      <md-item ng-repeat="item in listItems" class="quote">
+        <md-item-content>
+          <div class="md-tile-left">
+            <i class="fa fa-4x fa-fw fa-{{item.icon}}"></i>
+          </div>
+          <div class="md-tile-content">
+            <label ng-bind="item.time"></label>
+            <p ng-bind="item.text">
+            </p>
+          </div>
+        </md-item-content>
+        <md-divider inset></md-divider>
+      </md-item>
+    </md-list>
+  </md-content>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-md-pull-to-refresh/angular-md-pull-to-refresh.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+</body>
+</html>

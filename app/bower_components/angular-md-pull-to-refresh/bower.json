@@ -1,0 +1,32 @@
+{
+  "name": "angular-md-pull-to-refresh",
+  "main": [
+    "angular-md-pull-to-refresh.js",
+    "angular-md-pull-to-refresh.css"
+  ],
+  "version": "0.0.0",
+  "homepage": "https://github.com/infomofo/angular-md-pull-to-refresh",
+  "authors": [
+    "Will Chiong <will@infomofo.com>"
+  ],
+  "description": "an angular directive for pull to refresh with material design",
+  "keywords": [
+    "angular",
+    "material",
+    "design",
+    "pull",
+    "refresh"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.13",
+    "angular-material": "~0.7.1"
+  }
+}
