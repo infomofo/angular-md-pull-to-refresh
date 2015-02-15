@@ -38,8 +38,9 @@ angular.module('infomofo.angularMdPullToRefresh', [])
           // Wait 1 second and then add an event listener to the scroll events on this list- this enables pull to refresh functionality
           $timeout(function () {
             var onScroll = function (event) {
-              //if (element[0].scrollTop <= 0 && scope.lastScrollTop <= 0) {
-              if (element[0].scrollTop <= 0) {
+              if (element[0].scrollTop <= 0 && scope.lastScrollTop <= 0) {
+              //uncomment this line for desktop testing
+              //if (element[0].scrollTop <= 0) {
                 if (scope.isAtTop) {
                   scope.pullToRefresh();
                 } else {
