@@ -16,6 +16,11 @@ How do I use it
 
         <md-content im-pull-to-refresh refresh-function="refreshFunction()">
 
+See a demo
+==========
+
+On a mobile device you can visit our gh-page to see a [live demo](https://infomofo.github.io/angular-md-pull-to-refresh/app/) of a pull-to-refresh gesture.
+
 How do I affect the appearance
 ==============================
 
